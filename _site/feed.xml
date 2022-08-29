@@ -1,1 +1,214 @@
-<feed xmlns="http://www.w3.org/2005/Atom"> <id>https://hitesh1210.github.io/</id><title>Hitesh Kadu</title><subtitle>Don't think out of box... Hack it!!!</subtitle> <updated>2022-08-29T16:07:36+05:30</updated> <author> <name>Hitesh Kadu</name> <uri>https://hitesh1210.github.io/</uri> </author><link rel="self" type="application/atom+xml" href="https://hitesh1210.github.io/feed.xml"/><link rel="alternate" type="text/html" hreflang="en" href="https://hitesh1210.github.io/"/> <generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator> <rights> © 2022 Hitesh Kadu </rights> <icon>/assets/img/favicons/favicon.ico</icon> <logo>/assets/img/favicons/favicon-96x96.png</logo> <entry><title>Talkative HTB</title><link href="https://hitesh1210.github.io/posts/Talkative-HTB/" rel="alternate" type="text/html" title="Talkative HTB" /><published>2022-08-27T00:00:00+05:30</published> <updated>2022-08-27T00:00:00+05:30</updated> <id>https://hitesh1210.github.io/posts/Talkative-HTB/</id> <content src="https://hitesh1210.github.io/posts/Talkative-HTB/" /> <author> <name>Hitesh Kadu</name> </author> <category term="HackTheBox" /> <category term="Hard" /> <summary> On Talkative, we start with command injection in the Jamovi application, which gives us the shell in a docker container. In-home dir we found the omv file which contains usernames and passwords. We used the creds in bolt CMS to get admin access. Admin can edit the files so we edit the PHP file in config dir and get the shell on the bolt container. We can SSH to the box from the bolt container a... </summary> </entry> <entry><title>TimeLapse HackTheBox</title><link href="https://hitesh1210.github.io/posts/TimeLapse-HackTheBox/" rel="alternate" type="text/html" title="TimeLapse HackTheBox" /><published>2022-08-20T00:00:00+05:30</published> <updated>2022-08-20T00:00:00+05:30</updated> <id>https://hitesh1210.github.io/posts/TimeLapse-HackTheBox/</id> <content src="https://hitesh1210.github.io/posts/TimeLapse-HackTheBox/" /> <author> <name>Hitesh Kadu</name> </author> <category term="HackTheBox" /> <category term="Easy" /> <summary> Timelapse is an Easy Windows that starts with accessing the SMB share. In SMB shares there is a zip file. We crack the zip file using John. The ZIP files contain the encrypted PFX file. Again using John we crack the password. From the PFX file, we extract the SSL certificate and a private key, which are used to log in with Winrm. As we log in to the box we found the PowerShell history file cont... </summary> </entry> <entry><title>HackTheBox: Late WriteUp</title><link href="https://hitesh1210.github.io/posts/HackTheBox-Late-WriteUp/" rel="alternate" type="text/html" title="HackTheBox: Late WriteUp" /><published>2022-08-09T00:00:00+05:30</published> <updated>2022-08-09T00:00:00+05:30</updated> <id>https://hitesh1210.github.io/posts/HackTheBox-Late-WriteUp/</id> <content src="https://hitesh1210.github.io/posts/HackTheBox-Late-WriteUp/" /> <author> <name>Hitesh Kadu</name> </author> <category term="HackTheBox" /> <category term="Easy" /> <summary> Late is the HackTheBox easy box. Which start with finding the subdomain. The subdomain has upload option, which converts the image to text. It is vulnerbale to STTI.Using it we get the RCE. For privilege escalation, we are required to enumerate files in the victim machine owned by the user and modify a script that will be executed by root whenever we SSH into the machine. Recon: Nmap: PORT S... </summary> </entry> <entry><title>Cybox:1.1 Vulnhub Writeup</title><link href="https://hitesh1210.github.io/posts/Cybox-1.1-Vulnhub-Writeup/" rel="alternate" type="text/html" title="Cybox:1.1 Vulnhub Writeup" /><published>2021-01-10T00:00:00+05:30</published> <updated>2021-01-10T00:00:00+05:30</updated> <id>https://hitesh1210.github.io/posts/Cybox-1.1-Vulnhub-Writeup/</id> <content src="https://hitesh1210.github.io/posts/Cybox-1.1-Vulnhub-Writeup/" /> <author> <name>Hitesh Kadu</name> </author> <category term="vulnhub" /> <category term="Medium" /> <summary> To solve Cybox 1.1, we’ll find subdomains. First, we create the user on the register.cybox.company subdomain, then with the email id of the created user we create another account on monitor.cybox.company. This subdomain has a password reset option. We used that option to reset the password of admin. Admin panel has LFI vulnerability drives us towards a web shell via log poisoning. Once we land ... </summary> </entry> <entry><title>M87 vulnhub Writeup</title><link href="https://hitesh1210.github.io/posts/M87-Vulnhub-Writeup/" rel="alternate" type="text/html" title="M87 vulnhub Writeup" /><published>2020-11-29T00:00:00+05:30</published> <updated>2020-11-29T00:00:00+05:30</updated> <id>https://hitesh1210.github.io/posts/M87-Vulnhub-Writeup/</id> <content src="https://hitesh1210.github.io/posts/M87-Vulnhub-Writeup/" /> <author> <name>Hitesh Kadu</name> </author> <category term="vulnhub" /> <category term="Easy" /> <summary> M87 was an easy box. It start with finding directories. Then we fuzz the hidden parameters. id parameter was vulnerable to sqli and file vulnerable to LFI. With this two vulnerabilities we find out usernames and passwords. Using port 9090 we get the shell on box. Privesc to root by using capabilities. In this blog I tried to explain how to dump data manually. Summary Portscan Running gobu... </summary> </entry> </feed>
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://localhost:4000/</id>
+  <title>Hitesh Kadu</title>
+  <subtitle>Don't think out of box... Hack it!!!</subtitle>
+  <updated>2022-08-29T16:13:09+05:30</updated>
+  <author>
+    <name>Hitesh Kadu</name>
+    <uri>http://localhost:4000/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en"
+    href="http://localhost:4000/"/>
+  <generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator>
+  <rights> © 2022 Hitesh Kadu </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>Talkative HTB</title>
+    <link href="http://localhost:4000/posts/Talkative-HTB/" rel="alternate" type="text/html" title="Talkative HTB" />
+    <published>2022-08-27T00:00:00+05:30</published>
+  
+    <updated>2022-08-27T00:00:00+05:30</updated>
+  
+    <id>http://localhost:4000/posts/Talkative-HTB/</id>
+    <content src="http://localhost:4000/posts/Talkative-HTB/" />
+    <author>
+      <name>Hitesh Kadu</name>
+    </author>
+
+  
+    
+    <category term="HackTheBox" />
+    
+    <category term="Hard" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      On Talkative, we start with command injection in the Jamovi application, which gives us the shell in a docker container. In-home dir we found the omv file which contains usernames and passwords. We used the creds in bolt CMS to get admin access. Admin can edit the files so we edit the PHP file in config dir and get the shell on the bolt container. We can SSH to the box from the bolt container a...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>TimeLapse HackTheBox</title>
+    <link href="http://localhost:4000/posts/TimeLapse-HackTheBox/" rel="alternate" type="text/html" title="TimeLapse HackTheBox" />
+    <published>2022-08-20T00:00:00+05:30</published>
+  
+    <updated>2022-08-20T00:00:00+05:30</updated>
+  
+    <id>http://localhost:4000/posts/TimeLapse-HackTheBox/</id>
+    <content src="http://localhost:4000/posts/TimeLapse-HackTheBox/" />
+    <author>
+      <name>Hitesh Kadu</name>
+    </author>
+
+  
+    
+    <category term="HackTheBox" />
+    
+    <category term="Easy" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Timelapse is an Easy Windows that starts with accessing the SMB share. In SMB shares there is a zip file. We crack the zip file using John. The ZIP files contain the encrypted PFX file.
+Again using John we crack the password. From the PFX file, we extract the SSL certificate and a private key, which are used to log in with Winrm. As we log in to the box we found the PowerShell history file cont...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>HackTheBox: Late WriteUp</title>
+    <link href="http://localhost:4000/posts/HackTheBox-Late-WriteUp/" rel="alternate" type="text/html" title="HackTheBox: Late WriteUp" />
+    <published>2022-08-09T00:00:00+05:30</published>
+  
+    <updated>2022-08-09T00:00:00+05:30</updated>
+  
+    <id>http://localhost:4000/posts/HackTheBox-Late-WriteUp/</id>
+    <content src="http://localhost:4000/posts/HackTheBox-Late-WriteUp/" />
+    <author>
+      <name>Hitesh Kadu</name>
+    </author>
+
+  
+    
+    <category term="HackTheBox" />
+    
+    <category term="Easy" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Late is the HackTheBox easy box. Which start with finding the subdomain. The subdomain has upload option, which converts the image to text. It is vulnerbale to STTI.Using it we get the RCE. For privilege escalation, we are required to enumerate files in the victim machine owned by the user and modify a script that will be executed by root whenever we SSH into the machine.
+Recon:
+
+Nmap:
+PORT   S...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Cybox:1.1 Vulnhub Writeup</title>
+    <link href="http://localhost:4000/posts/Cybox-1.1-Vulnhub-Writeup/" rel="alternate" type="text/html" title="Cybox:1.1 Vulnhub Writeup" />
+    <published>2021-01-10T00:00:00+05:30</published>
+  
+    <updated>2021-01-10T00:00:00+05:30</updated>
+  
+    <id>http://localhost:4000/posts/Cybox-1.1-Vulnhub-Writeup/</id>
+    <content src="http://localhost:4000/posts/Cybox-1.1-Vulnhub-Writeup/" />
+    <author>
+      <name>Hitesh Kadu</name>
+    </author>
+
+  
+    
+    <category term="vulnhub" />
+    
+    <category term="Medium" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      To solve Cybox 1.1, we’ll find subdomains. First, we create the user on the register.cybox.company subdomain, then with the email id of the created user we create another account on monitor.cybox.company. This subdomain has a password reset option. We used that option to reset the password of admin. Admin panel has LFI vulnerability drives us towards a web shell via log poisoning.
+Once we land ...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>M87 vulnhub Writeup</title>
+    <link href="http://localhost:4000/posts/M87-Vulnhub-Writeup/" rel="alternate" type="text/html" title="M87 vulnhub Writeup" />
+    <published>2020-11-29T00:00:00+05:30</published>
+  
+    <updated>2020-11-29T00:00:00+05:30</updated>
+  
+    <id>http://localhost:4000/posts/M87-Vulnhub-Writeup/</id>
+    <content src="http://localhost:4000/posts/M87-Vulnhub-Writeup/" />
+    <author>
+      <name>Hitesh Kadu</name>
+    </author>
+
+  
+    
+    <category term="vulnhub" />
+    
+    <category term="Easy" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      M87 was an easy box. It start with finding directories. Then we fuzz the hidden parameters. id parameter was vulnerable to sqli and file vulnerable to LFI. With this two vulnerabilities we find out usernames and passwords. Using port 9090 we get the shell on box. Privesc to root by using capabilities. In this blog I tried to explain how to dump data manually.
+
+Summary
+
+  Portscan
+  Running gobu...
+    </summary>
+  
+
+  </entry>
+
+</feed>
+
+
