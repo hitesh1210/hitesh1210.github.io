@@ -814,7 +814,7 @@
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="1137 words">
+  title="1104 words">
   <em>6 min</em> read</span>
 
     </div>
@@ -914,7 +914,7 @@
 
 <h2 id="duplicate-host-headers"><span class="mr-2">Duplicate Host headers</span><a href="#duplicate-host-headers" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<p>Suppose you encounter a web application and suspect that it might not handle duplicate Host headers correctly. In this scenario, you can craft a request with multiple Host headers, and although most modern browsers will not send such a request, some systems might process it differently.</p>
+<p>When an attacker injects a duplicate Host header, the server might interpret the request differently. Depending on how the server processes multiple headers, it may end up using the injected Host header instead of the original one.</p>
 
 <p>For example, consider the following request:</p>
 
@@ -928,7 +928,7 @@ Host: vulnerable-website.com
 Host: bad-stuff-here
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>In this case, the web application might exhibit varied behavior. Some systems will give precedence to the first instance of the Host header, while others may favor the last instance. This discrepancy in handling the duplicate headers can lead to interesting outcomes that attackers could potentially exploit.</p>
+<p>In this case, the web application might exhibit varied behavior. Some systems will give precedence to the first instance of the Host header, while others may favor the last instance.</p>
 
 <h2 id="host-override-headers"><span class="mr-2">Host Override Headers</span><a href="#host-override-headers" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
@@ -950,7 +950,7 @@ X-Forwarded-Host: www.attacker.com
 
 <p>In this example, the attacker sets Host to a legitimate domain (www.example.com), which is the target domain they want to attack. They then use X-Forwarded-Host to specify their own malicious domain (www.attacker.com).</p>
 
-<p>Besides the widely used X-Forwarded-Host header, several other headers serve a similar purpose and may lead to similar security risks. Here’s an improved explanation of these headers:</p>
+<p>Besides the widely used X-Forwarded-Host header, several other headers serve a similar purpose and may lead to similar security risks.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="code-header">
         <span data-label-text="Plaintext"><i class="fas fa-code small"></i></span>
